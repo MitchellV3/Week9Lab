@@ -28,7 +28,7 @@
                     <td>${user.lastName}</td>
                     <td>${user.email}</td>
                     <c:choose>
-                        <c:when test="${user.getRole().getRoleID() == 1}">
+                        <c:when test="${user.getRole().getRoleId() == 1}">
                             <td>Admin</td>
                         </c:when>
                         <c:otherwise>
@@ -89,7 +89,7 @@
                 <label>Role:</label>
                 <select name="role">
                     <c:choose>
-                        <c:when test="${selectUser.getRole().getRoleID() == 1}">
+                        <c:when test="${selectUser.getRole().getRoleId() == 1}">
                             <option value="1" selected>Admin</option>
                             <option value="2">User</option>
                         </c:when>

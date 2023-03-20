@@ -5,6 +5,7 @@
  */
 package servlets;
 
+import dataaccess.RoleDB;
 import models.Role;
 import models.User;
 import services.RoleService;
@@ -113,7 +114,7 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String firstname = request.getParameter("firstName");
         String lastname = request.getParameter("lastName");
-        Role newRole = new Role(request.getParameter("role"));
+        Role newRole = RoleDB.get(Integer.parseInt(request.getParameter("role")));
         String action = request.getParameter("action");
 
         try {
