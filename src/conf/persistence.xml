@@ -3,6 +3,8 @@
   <persistence-unit name="UsersPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <non-jta-data-source> java:/comp/env/jdbc/notesdb</non-jta-data-source>
+    <class>models.User</class>
+    <class>models.Role</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
   </persistence-unit>
 </persistence>
